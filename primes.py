@@ -8,5 +8,22 @@ def checkIfPrime(num):
     else:
         return 1
     
+    
+def primes(number_of_primes):
+    if number_of_primes <= 0:
+        raise ValueError
+    
+    list = [2]
+    start = 3
+
+    while len(list) <= number_of_primes - 1:
+        isPrime = checkIfPrime(start)
+        if isPrime:
+            list.append(start)
+
+        start += 1
+
+    return list
+    
 
 
